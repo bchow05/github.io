@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bruce Chow - IT Professional Portfolio</title>
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="Googlebot" content="nosnippet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+            background-image: url('top-view-different-paper-sheets.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            background-color: #f0f4ff;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #764ba2;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        section h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        section h3 {
+            color: #764ba2;
+            font-size: 1.4rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .job-entry {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .job-entry:last-child {
+            border-bottom: none;
+        }
+
+        .job-title {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .job-company {
+            color: #667eea;
+            font-weight: 600;
+            margin: 5px 0;
+        }
+
+        .job-dates {
+            color: #888;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .job-description {
+            color: #555;
+            margin-left: 20px;
+        }
+
+        .job-description li {
+            margin: 5px 0;
+            margin-left: 20px;
+        }
+
+        .intro-text p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+
+        .education-box {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            margin: 15px 0;
+        }
+
+        .cert-badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin: 10px 10px 10px 0;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .cert-badge:hover {
+            background: #764ba2;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .contact-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .contact-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #764ba2;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        .back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            z-index: 99;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.6);
+        }
+
+        .back-to-top.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bruce Chow</h1>
+        <p>IT Administrator | 15+ Years Experience | Enterprise Infrastructure & Device Management</p>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="#intro">Welcome</a></li>
+                <li><a href="#about">Competencies</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Welcome Section -->
+        <section id="intro">
+            <h2>Welcome</h2>
+            <div class="intro-text">
+                <p>IT Administrator with 15+ years of technical support experience managing enterprise infrastructure across macOS and Windows environments.</p>
+                <p>Proven expertise in device management, identity and access administration, cloud platform management, and end-user support at scale. Skilled in implementing security policies, managing IT infrastructure for distributed teams, and creating scalable solutions for growing organizations.</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>Core Competencies</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                <div>
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Device & Infrastructure Management</h3>
+                    <ul style="margin-left: 20px;">
+                        <li>Mosyle, Intune, JAMF (Pro, Security Portal)</li>
+                        <li>Active Directory, Microsoft Entra ID, Okta</li>
+                        <li>macOS and Windows management</li>
+                        <li>VPN and Print Servers</li>
+                        <li>Hardware Imaging & Deployment</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Cloud & Collaboration</h3>
+                    <ul style="margin-left: 20px;">
+                        <li>Google Workspace</li>
+                        <li>Microsoft 365</li>
+                        <li>AWS</li>
+                        <li>Patch Management</li>
+                        <li>Zoom, GitHub, Notion</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>Professional Experience</h2>
+
+            <div class="job-entry">
+                <div class="job-title">Endpoint Administrator</div>
+                <div class="job-company">Havergal College</div>
+                <div class="job-dates">January 2022 – Present</div>
+                <ul class="job-description">
+                    <li>Manage and configure fleet of macOS and Windows devices using modern device management platforms</li>
+                    <li>Procure hardware and manage IT inventory to ensure timely device availability for staff and students</li>
+                    <li>Deploy and maintain security configurations across 2,500+ devices supporting faculty, staff, and students</li>
+                    <li>Oversee patching and security updates for both physical servers and virtual machines on a monthly basis</li>
+                    <li>Provide technical support for escalated issues and collaborate with service desk team</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-title">Service Desk Technician</div>
+                <div class="job-company">Havergal College</div>
+                <div class="job-dates">May 2014 – December 2021</div>
+                <ul class="job-description">
+                    <li>Managed Mobile Device Management (MDM) for 800+ devices using Intune and JAMF, including configuration profiles and policy deployment</li>
+                    <li>Administered Active Directory, Microsoft 365, Google Workspace for Education, supporting 2,500+ users</li>
+                    <li>Implemented identity and asset management for all end-user devices with automated patch management</li>
+                    <li>Performed full OS imaging and deployment of macOS and Windows computers annually</li>
+                    <li>Managed user onboarding and offboarding processes, including account provisioning and access control</li>
+                    <li>Maintained VoIP systems, print servers, and managed IT asset procurement and budgeting</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-title">Help Desk Support</div>
+                <div class="job-company">Micros Oracle</div>
+                <div class="job-dates">January 2012 – April 2014</div>
+                <ul class="job-description">
+                    <li>Provided multi-level technical support to clients across Canada with strong focus on customer satisfaction</li>
+                    <li>Trained and mentored new support staff on troubleshooting and customer service best practices</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-title">Technical Support Specialist</div>
+                <div class="job-company">Patheon by Thermo Fisher Scientific</div>
+                <div class="job-dates">December 2009 – January 2012</div>
+                <ul class="job-description">
+                    <li>Maintained Active Directory, Print Servers, and Microsoft Exchange infrastructure for Greater Toronto Area (GTA)</li>
+                    <li>Imaged and deployed Windows systems across multiple locations</li>
+                    <li>Supported global users remotely via VPN using follow-the-sun support model</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-title">PC Technician</div>
+                <div class="job-company">Tech4U Onsite Computer Services, Markham, ON</div>
+                <div class="job-dates">December 2006 – December 2011 (Consultant basis)</div>
+                <ul class="job-description">
+                    <li>Onsite computer diagnosis, repair, and configuration</li>
+                    <li>Malware removal and system optimization</li>
+                    <li>Operating system installation for Windows and macOS</li>
+                    <li>Blue Screen of Death (BSOD) resolution and prevention</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-title">PC Technician (Full-Time / Part-Time)</div>
+                <div class="job-company">Canada Computers, Vaughan, ON</div>
+                <div class="job-dates">February 2008 – February 2011</div>
+                <ul class="job-description">
+                    <li>Diagnosed PC issues brought in by customers</li>
+                    <li>Custom-built computers to customer specifications</li>
+                    <li>Installed, upgraded, updated and configured all PCs to customer specifications</li>
+                    <li>Provided technical support and customer service on computer related issues</li>
+                    <li>Responded to customers within 48 hours regarding issues and repair costs</li>
+                    <li>Tested all return products to ensure they were in working order</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-title">Laptop Technician</div>
+                <div class="job-company">Flextronics, Newmarket, ON (via Aerotek Staffing Agency)</div>
+                <div class="job-dates">February 2007 – February 2008</div>
+                <ul class="job-description">
+                    <li>Repaired laptops from customers, off lease or directly from IBM/Lenovo</li>
+                    <li>Worked on Apple MacBook laptops and refurbished them to new condition</li>
+                    <li>Entered laptop specifications and logged them into company's database</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-title">Product Tester</div>
+                <div class="job-company">Best Buy, Brampton, ON</div>
+                <div class="job-dates">Seasonal 2007</div>
+                <ul class="job-description">
+                    <li>Tested all return products from company except for fridges and refrigerators</li>
+                    <li>Ensured all return products were in working order or sent to repair facilities</li>
+                    <li>Wiped personal data from desktops and laptops if they were in working order</li>
+                    <li>Entered product results into the company's database</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-title">Test & Audit Technician</div>
+                <div class="job-company">CDI Computers, Markham, ON</div>
+                <div class="job-dates">June 2005 – February 2006</div>
+                <ul class="job-description">
+                    <li>Repaired customer computers to factory default settings</li>
+                    <li>Entered product results into the company's database</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Certifications & Languages Section -->
+        <section id="certifications">
+            <h2>Certifications & Languages</h2>
+            
+            <h3>Professional Certifications</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px;">
+                <span class="cert-badge">CompTIA A+</span>
+                <span class="cert-badge">JAMF 100</span>
+                <span class="cert-badge">JAMF 200</span>
+                <span class="cert-badge">JAMF 270</span>
+                <span class="cert-badge">JAMF 300</span>
+                <span class="cert-badge">JAMF 370</span>
+            </div>
+
+            <h3>Languages</h3>
+            <ul style="margin-left: 20px;">
+                <li><strong>English</strong> - Native Proficiency</li>
+                <li><strong>Cantonese</strong> - Native Proficiency</li>
+                <li><strong>Mandarin</strong> - Limited Working Proficiency</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>Feel free to reach out if you'd like to connect. I check my emails daily and am happy to discuss IT solutions, career opportunities, or collaborate on projects.</p>
+
+            <form id="contactForm" action="https://formspree.io/f/mreloned" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h4>📧 Email</h4>
+                    <p><a href="/cdn-cgi/l/email-protection#9efdf6f1e9b0fcecebfdfbdef9f3fff7f2b0fdf1f3" style="color: #667eea; text-decoration: none;">Contact via Email</a></p>
+                </div>
+                <div class="contact-card">
+                    <h4>🔗 Connect</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/bchow168/" title="LinkedIn" target="_blank">in</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;Copyright by Bruce Chow. All rights reserved.</p>
+        <p>Please do not copy any content from this site without the owner's consent.</p>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" title="Back to top">↑</button>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () =
